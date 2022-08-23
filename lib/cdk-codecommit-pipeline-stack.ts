@@ -57,13 +57,10 @@ export class CdkCodecommitPipelineStack extends cdk.Stack {
                     },
                     build: {
                         commands: [
-                            'ls -la',
-                            'pwd',
-                            'node -v',
-                            'npm -v',
                             'cdk --version',
                             'npm ci',
                             'npm run build',
+                            'cdk bootstrap',
                             'cdk deploy --all --force --require-approval=never',
                         ]
                     },
